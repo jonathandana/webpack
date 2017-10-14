@@ -1,4 +1,4 @@
 # webpack
 Example webpack config.
 
-npm intall
+npm install
