@@ -67,6 +67,14 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1);
+(function webpackMissingModule() { throw new Error("Cannot find module \"dev-server\""); }());
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -75,11 +83,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.hello = undefined;
 
-__webpack_require__(1);
+__webpack_require__(2);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var $ = __webpack_require__(6);
+var $ = __webpack_require__(7);
 
 var hello = exports.hello = function hello(name) {
     _classCallCheck(this, hello);
@@ -93,28 +101,28 @@ $('.btn').click(function () {
 });
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(2);
+var content = __webpack_require__(3);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {"hmr":true}
+var options = {"sourceMap":true,"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/sass-loader/lib/loader.js??ref--1-2!./main.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/sass-loader/lib/loader.js??ref--1-2!./main.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!../../node_modules/sass-loader/lib/loader.js??ref--1-3!./main.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!../../node_modules/sass-loader/lib/loader.js??ref--1-3!./main.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -124,21 +132,21 @@ if(false) {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(true);
+exports = module.exports = __webpack_require__(4)(true);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  background-color: red; }\n\nbutton {\n  display: flex; }\n", "", {"version":3,"sources":["/Library/WebServer/Documents/playground/webpack/example-1/src/scss/src/scss/main.scss","/Library/WebServer/Documents/playground/webpack/example-1/src/scss/src/scss/inc/_variables.scss"],"names":[],"mappings":"AAEA;EAAK,sBCFK,EDEsB;;AAChC;EAAO,cAAa,EAAG","file":"main.scss","sourcesContent":["@import \"inc/variables\";\n\nbody{background-color: $color;}\nbutton{display: flex}","$color:red;"],"sourceRoot":""}]);
+exports.push([module.i, "body {\n  background-color: red; }\n\nbutton {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n", "", {"version":3,"sources":["/Library/WebServer/Documents/playground/webpack/example-1/src/scss/main.scss","/Library/WebServer/Documents/playground/webpack/example-1/src/scss/inc/_variables.scss"],"names":[],"mappings":"AAEA;EAAK,sBCFK,EDEsB;;AAChC;EAAO,qBAAa;EAAb,qBAAa;EAAb,cAAa,EAAG","file":"main.scss","sourcesContent":["@import \"inc/variables\";\n\nbody{background-color: $color;}\nbutton{display: flex}","$color:red;"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -220,7 +228,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -276,7 +284,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(5);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -592,7 +600,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 
@@ -687,7 +695,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
