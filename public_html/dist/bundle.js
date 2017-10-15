@@ -127,12 +127,12 @@ if(false) {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(3)(true);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  background-color: red; }\n", ""]);
+exports.push([module.i, "body {\n  background-color: red; }\n\nbutton {\n  display: flex; }\n", "", {"version":3,"sources":["/Library/WebServer/Documents/playground/webpack/example-1/src/scss/src/scss/main.scss","/Library/WebServer/Documents/playground/webpack/example-1/src/scss/src/scss/inc/_variables.scss"],"names":[],"mappings":"AAEA;EAAK,sBCFK,EDEsB;;AAChC;EAAO,cAAa,EAAG","file":"main.scss","sourcesContent":["@import \"inc/variables\";\n\nbody{background-color: $color;}\nbutton{display: flex}","$color:red;"],"sourceRoot":""}]);
 
 // exports
 
